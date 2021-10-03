@@ -1,0 +1,98 @@
+
+
+
+#right-wheel {
+  animation: wheel 0.7s  infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+
+}
+#left-wheel {
+  animation: wheel 0.7s  infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+
+}
+#man-bike{
+  animation: bike 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+
+}
+
+
+
+
+
+
+.page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh
+}
+
+
+
+
+
+
+
+
+.ball {
+  position: absolute;
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+  animation-iteration-count: infinite;
+  justify-content: center;
+  align-items:center;
+  margin-left:200px;
+}
+
+@keyframes bounce {
+  from { transform: translate3d(0, 0, 0);     }
+  to   { transform: translate3d(0, 200px, 0); }
+}
+
+
+.ball {
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+  to   { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200px, 0); }
+}
+
+@keyframes wheel {
+  from {
+   transform: rotateZ(0deg);
+  }
+  to{
+      transform: rotateZ(360deg)
+
+  }
+}
+@keyframes bike{
+  from {
+transform: rotateX(0deg);
+  }
+  to{
+      transform: rotateX(20deg);
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
